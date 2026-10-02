@@ -20,6 +20,7 @@
             justify-content: center;
             align-items: center;
             color: #ffffff;
+            overflow: hidden;
             
             /* Ефект 1: Плавний градієнт */
             background: linear-gradient(135deg, #0f0c20, #15102a, #060b19, #11021f);
@@ -54,37 +55,35 @@
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 40px;
-            max-width: 500px;
+            max-width: 450px;
             width: 90%;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
-        /* Стилізація тексту */
-        h1 {
+        .card h1 {
             font-size: 2rem;
-            margin-bottom: 15px;
-            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            margin-bottom: 16px;
+            background: linear-gradient(45deg, #ff7b00, #ff007b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        p {
-            font-size: 1.1rem;
+        .card p {
+            font-size: 1rem;
+            color: #ccccdd;
             line-height: 1.6;
-            color: #cbd5e1;
         }
     </style>
 </head>
 <body>
 
-    <!-- Картка з вашим текстом поверх гарного фону -->
     <div class="card">
-        <h1>Вітаємо у проєкті!</h1>
-        <p>Тут буде щось цікаве. Текст на фоні тепер читається набагато краще, а сам сайт виглядає технологічно та сучасно.</p>
+        <h1>Project-X</h1>
+        <p>Ласкаво просимо до вашого нового розважального проєкту! Ця сторінка використовує сучасний ефект Glassmorphism та плавну фонову анімацію.</p>
     </div>
 
 </body>
