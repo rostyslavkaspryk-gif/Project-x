@@ -1,13 +1,91 @@
-# Project-x
-grupa na project x jo
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Моя перша сторінка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Розважений Проєкт</title>
+    <style>
+        /* Обнуляємо стандартні відступи */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Налаштування анімованого градієнту та сітки для всього фону */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            
+            /* Ефект 1: Плавний градієнт */
+            background: linear-gradient(135deg, #0f0c20, #15102a, #060b19, #11021f);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            
+            /* Ефект 2: Текстурна сітка з крапок поверх градієнту */
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Анімація переливання фону */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Контейнер для вмісту з ефектом розмитого скла (Glassmorphism) */
+        .card {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Стилізація тексту */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+    </style>
 </head>
 <body>
-    <h1>hejka! zapraszamy na project y xdd!!!!!! Tutaj biędzie wszystooo xdd!!! czekamy na ciębie)))))))</h1>
-    <p>Tutaj biędzie basen. Wszystko jak w projectu x) ale chyba y XD. Jeśli chceś się dodać dzwoń na numer +48880260191 XDDD. </p>
+
+    <!-- Картка з вашим текстом поверх гарного фону -->
+    <div class="card">
+        <h1>Вітаємо у проєкті!</h1>
+        <p>Тут буде щось цікаве. Текст на фоні тепер читається набагато краще, а сам сайт виглядає технологічно та сучасно.</p>
+    </div>
+
 </body>
 </html>
